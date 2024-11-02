@@ -7,8 +7,10 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-transformers = "^4.44.2"
+transformers = {extras = ["sentencepiece"], version = "^4.44.2"}
 torch = "^2.4.1"
+datasets = "^2.21.0"
+sentencepiece = "^0.2.0"
 
 
 [build-system]

@@ -12,4 +12,5 @@ inputs = processor(ds[0]["audio"]["array"], sampling_rate=ds[0]["audio"]["sampli
 generated_ids = model.generate(inputs["input_features"], attention_mask=inputs["attention_mask"])
 
 transcription = processor.batch_decode(generated_ids, skip_special_tokens=True)
-transcription
+
+print(transcription[0])
